@@ -1,3 +1,28 @@
+import Image from "next/image";
+
+const brands = [
+  {
+    name: "Coca-Cola",
+    image: "/brands/Coca-Cola_Logo_0.svg",
+  },
+  {
+    name: "NIVEA",
+    image: "/brands/NIVEA_Logo_0.svg",
+  },
+  {
+    name: "1xbet",
+    image: "/brands/1xbet-seeklogo.svg",
+  },
+  {
+    name: "IDP",
+    image: "/brands/IDP.png",
+  },
+  {
+    name: "Profee",
+    image: "/brands/profee.png",
+  },
+];
+
 export function ClientsSection() {
   return (
     <section className="py-16 border-t border-zinc-100">
@@ -7,17 +32,19 @@ export function ClientsSection() {
             Our Clients
           </h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
-          {[
-            "Coca-Cola",
-            "Saudi",
-            "Google",
-            "Snapchat",
-            "Essence Mediacom",
-            "Ogilvy",
-          ].map((client, i) => (
-            <div key={i} className="text-zinc-400 font-medium">
-              {client}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
+          {brands.map((brand) => (
+            <div
+              key={brand.name}
+              className="relative w-full h-16  transition-all duration-300"
+            >
+              <Image
+                src={brand.image}
+                alt={brand.name}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
+              />
             </div>
           ))}
         </div>
