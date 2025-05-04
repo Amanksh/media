@@ -8,7 +8,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
-import { Instagram, Linkedin, MessageCircle, Mail } from "lucide-react";
+import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const words = [
   {
@@ -32,25 +33,25 @@ const words = [
 const socialLinks = [
   {
     name: "Instagram",
-    icon: Instagram,
+    icon: FaInstagram,
     url: "https://instagram.com/yourusername",
     color: "text-pink-600",
   },
   {
     name: "LinkedIn",
-    icon: Linkedin,
+    icon: FaLinkedin,
     url: "https://linkedin.com/in/yourusername",
     color: "text-blue-600",
   },
   {
     name: "WhatsApp",
-    icon: MessageCircle,
+    icon: FaWhatsapp,
     url: "https://wa.me/yournumber",
     color: "text-green-600",
   },
   {
     name: "Email",
-    icon: Mail,
+    icon: MdEmail,
     url: "mailto:your@email.com",
     color: "text-red-600",
   },
@@ -62,7 +63,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <div className="relative h-[30vh] flex items-center justify-center overflow-hidden">
         <BackgroundBeams />
-        <div className="relative z-10 text-center">
+        <div className="relative flex flex-col items-center justify-center z-10 text-center">
           <TypewriterEffect words={words} />
           <p className="mt-4 text-lg text-zinc-600 max-w-2xl mx-auto px-4">
             We'd love to hear from you. Connect with us through any of these

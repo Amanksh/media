@@ -23,33 +23,39 @@ export function Navbar() {
       <div className="container">
         <div className="flex items-center justify-between max-w-5xl mx-auto bg-white/80 dark:bg-black/80 backdrop-blur-sm rounded-full border border-zinc-200 dark:border-zinc-800 px-6 py-3 shadow-sm">
           <div className="flex flex-col items-center justify-center leading-none select-none">
-            <div className="flex items-center space-x-1">
-              <span
-                className="text-xl font-extrabold text-[#ff3131] tracking-wider font-sans"
-                style={{
-                  fontFamily:
-                    "Fredoka One, Baloo, Arial Rounded MT Bold, Arial, sans-serif",
-                }}
-              >
-                BUZZ
-              </span>
-              <span className="relative inline-block">
+            <Link
+              href="/"
+              className="flex  flex-col items-center justify-center"
+            >
+              <div className="flex items-center justify-center space-x-1">
                 <span
-                  className="block text-xl font-extrabold text-[#ff3131] tracking-wider font-sans"
+                  className="text-xl font-extrabold text-[#ff3131] tracking-wider font-sans"
                   style={{
                     fontFamily:
                       "Fredoka One, Baloo, Arial Rounded MT Bold, Arial, sans-serif",
                   }}
                 >
-                  NOVA
+                  BUZZ
                 </span>
-                <span className="absolute left-1/6 -translate-x-1/5 -top-1 w-5 h-1 bg-[#ff3131] rounded-full"></span>
+                <span className="relative inline-block">
+                  <span
+                    className="block text-xl font-extrabold text-[#ff3131] tracking-wider font-sans"
+                    style={{
+                      fontFamily:
+                        "Fredoka One, Baloo, Arial Rounded MT Bold, Arial, sans-serif",
+                    }}
+                  >
+                    NOVA
+                  </span>
+                  <span className="absolute left-1/6 -translate-x-1/5 -top-1 w-5 h-1 bg-[#ff3131] rounded-full"></span>
+                </span>
+              </div>
+              <span className="text-[10px] tracking-[0.3em] text-black font-serif mt-1">
+                MEDIA
               </span>
-            </div>
-            <span className="text-[10px] tracking-[0.3em] text-black font-serif mt-1">
-              MEDIA
-            </span>
+            </Link>
           </div>
+
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -161,16 +167,14 @@ export function Navbar() {
                 </Link>
               );
             })}
-          </nav>
-          <div className="p-4 mt-auto">
             <Link
               href={"/contact"}
-              className="w-full bg-red-600 hover:bg-red-700 text-white rounded-full text-sm font-medium"
+              className="w-full bg-red-600 p-2 px-4 hover:bg-red-700 text-white rounded-full text-sm font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Get in Touch
             </Link>
-          </div>
+          </nav>
         </div>
       </div>
     </header>

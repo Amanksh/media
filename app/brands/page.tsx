@@ -29,27 +29,27 @@ const brands = [
 const testimonials = [
   {
     quote:
-      "Working with Solv Media transformed our influencer marketing strategy. The results exceeded our expectations.",
-    name: "Sarah Johnson",
-    title: "Marketing Director, Nike",
-  },
-  {
-    quote:
-      "The team's expertise in influencer marketing helped us reach new audiences and increase brand awareness.",
-    name: "Michael Chen",
-    title: "Brand Manager, Apple",
+      "Working with BuzzNova Media transformed our influencer marketing strategy. The results exceeded our expectations.",
+
+    title: "Marketing Director, Angel One",
   },
   {
     quote:
       "Solv Media's data-driven approach and creative campaigns delivered exceptional ROI for our brand.",
-    name: "Emily Rodriguez",
+
     title: "Digital Marketing Lead, Coca-Cola",
   },
   {
     quote:
       "Their understanding of the influencer landscape and ability to create authentic content is unmatched.",
-    name: "David Kim",
-    title: "Social Media Manager, Samsung",
+
+    title: "Social Media Manager, Kuku FM",
+  },
+  {
+    quote:
+      "Their understanding of the influencer landscape and ability to create authentic content is unmatched.",
+
+    title: "Social Media Manager, Sony LIV",
   },
 ];
 
