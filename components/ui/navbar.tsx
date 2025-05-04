@@ -163,9 +163,13 @@ export function Navbar() {
             })}
           </nav>
           <div className="p-4 mt-auto">
-            <Button className="w-full bg-red-600 hover:bg-red-700 text-white rounded-full text-sm font-medium">
+            <Link
+              href={"/contact"}
+              className="w-full bg-red-600 hover:bg-red-700 text-white rounded-full text-sm font-medium"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
               Get in Touch
-            </Button>
+            </Link>
           </div>
         </div>
       </div>

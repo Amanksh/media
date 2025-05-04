@@ -25,20 +25,6 @@ export function HeroSection() {
                 For Creators
               </Button>
             </div>
-            <div className="mt-12">
-              <p className="text-sm font-medium uppercase text-zinc-500 mb-4">
-                Official Partners
-              </p>
-              <div className="flex flex-wrap gap-8 items-center">
-                {["Meta", "TikTok", "YouTube", "Twitch", "Snapchat"].map(
-                  (partner) => (
-                    <div key={partner} className="text-zinc-400 font-medium">
-                      {partner}
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
           </div>
           <div className="relative">
             <div className="relative rounded-lg overflow-hidden aspect-[3/4] md:aspect-[4/5]">

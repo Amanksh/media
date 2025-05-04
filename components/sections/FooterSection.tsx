@@ -145,7 +145,7 @@ export function FooterSection() {
         </div>
         <div className="mt-12 pt-8 border-t border-zinc-100 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-zinc-500 text-sm">
-            © 2023 Solv Media. All rights reserved.
+            © 2023 BuzzNova Media. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href="#" className="text-zinc-500 hover:text-red-600 text-sm">

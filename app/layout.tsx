@@ -3,6 +3,7 @@ import "@/app/globals.css";
 
 import { Navbar } from "@/components/ui/navbar";
 import { Flag } from "lucide-react";
+import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 
 export const metadata = {
   title: "Buzznova Media - Best Influencer Marketing Agency in India",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className="min-h-screen font-sans antialiased">
         <Navbar />
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );
