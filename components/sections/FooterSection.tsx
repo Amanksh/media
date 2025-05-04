@@ -9,8 +9,31 @@ export function FooterSection() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <span className="text-2xl font-bold">
-                Solv<span className="text-red-600">Media</span>
+              <div className="flex items-center space-x-1">
+                <span
+                  className="text-xl font-extrabold text-[#ff3131] tracking-wider font-sans"
+                  style={{
+                    fontFamily:
+                      "Fredoka One, Baloo, Arial Rounded MT Bold, Arial, sans-serif",
+                  }}
+                >
+                  BUZZ
+                </span>
+                <span className="relative inline-block">
+                  <span
+                    className="block text-xl font-extrabold text-[#ff3131] tracking-wider font-sans"
+                    style={{
+                      fontFamily:
+                        "Fredoka One, Baloo, Arial Rounded MT Bold, Arial, sans-serif",
+                    }}
+                  >
+                    NOVA
+                  </span>
+                  <span className="absolute left-1/6 -translate-x-1/5 -top-1 w-5 h-1 bg-[#ff3131] rounded-full"></span>
+                </span>
+              </div>
+              <span className="text-[10px] tracking-[0.3em] text-black font-serif mt-1">
+                MEDIA
               </span>
             </Link>
             <p className="text-zinc-600 mb-6">

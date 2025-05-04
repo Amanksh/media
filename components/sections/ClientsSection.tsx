@@ -21,6 +21,22 @@ const brands = [
     name: "Profee",
     image: "/brands/profee.png",
   },
+  {
+    name: "Sony LIV",
+    image: "/brands/soneliv.jpeg",
+  },
+  {
+    name: "Kuku FM",
+    image: "/brands/kukufm.jpeg",
+  },
+  {
+    name: "Red Bull",
+    image: "/brands/redbull.svg",
+  },
+  {
+    name: "Angel One",
+    image: "/brands/Angelone.png",
+  },
 ];
 
 export function ClientsSection() {

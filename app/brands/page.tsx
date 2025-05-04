@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 import { motion } from "framer-motion";
 import { BackgroundBeams } from "@/components/ui/background-beams";
@@ -13,42 +15,15 @@ import { WavyBackground } from "@/components/ui/wavy-background";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 const brands = [
-  {
-    name: "Nike",
-    logo: "/brands/nike.svg",
-    category: "Sports & Lifestyle",
-    description: "Global leader in athletic footwear and apparel",
-  },
-  {
-    name: "Apple",
-    logo: "/brands/apple.svg",
-    category: "Technology",
-    description: "Innovative consumer electronics and software",
-  },
-  {
-    name: "Coca-Cola",
-    logo: "/brands/coca-cola.svg",
-    category: "Beverages",
-    description: "World's leading beverage company",
-  },
-  {
-    name: "Amazon",
-    logo: "/brands/amazon.svg",
-    category: "E-commerce",
-    description: "Global online retail and technology company",
-  },
-  {
-    name: "Samsung",
-    logo: "/brands/samsung.svg",
-    category: "Electronics",
-    description: "Leading consumer electronics manufacturer",
-  },
-  {
-    name: "Adidas",
-    logo: "/brands/adidas.svg",
-    category: "Sports & Lifestyle",
-    description: "Global sportswear and lifestyle brand",
-  },
+  { name: "Red Bull", logo: "/brands/redbull.svg" },
+  { name: "Profee", logo: "/brands/profee.png" },
+  { name: "IDP", logo: "/brands/IDP.png" },
+  { name: "Kuku FM", logo: "/brands/kukufm.jpeg" },
+  { name: "Sony LIV", logo: "/brands/soneliv.jpeg" },
+  { name: "1xBet", logo: "/brands/1xbet-seeklogo.svg" },
+  { name: "Angel One", logo: "/brands/Angelone.png" },
+  { name: "NIVEA", logo: "/brands/NIVEA_Logo_0.svg" },
+  { name: "Coca-Cola", logo: "/brands/Coca-Cola_Logo_0.svg" },
 ];
 
 const testimonials = [
@@ -125,28 +100,21 @@ export default function BrandsPage() {
               create impactful influencer marketing campaigns
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {brands.map((brand, index) => (
-              <motion.div
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {brands.map((brand) => (
+              <div
                 key={brand.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                className="group relative aspect-square bg-gray-50 rounded-lg p-6 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:scale-105"
               >
-                <Card className="bg-white border-zinc-200 overflow-hidden group">
-                  <CardContent className="p-6">
-                    <div className="h-16 w-16 rounded-lg bg-zinc-100 flex items-center justify-center mb-4 group-hover:bg-red-600/10 transition-colors">
-                      <div className="h-8 w-8 bg-zinc-200 rounded"></div>
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">{brand.name}</h3>
-                    <Badge className="mb-2 bg-red-600/10 text-red-600 border-red-600/20">
-                      {brand.category}
-                    </Badge>
-                    <p className="text-zinc-600">{brand.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                <Image
+                  src={brand.logo}
+                  alt={brand.name}
+                  width={200}
+                  height={200}
+                  className="object-contain w-full h-full"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg" />
+              </div>
             ))}
           </div>
         </div>
@@ -193,9 +161,13 @@ export default function BrandsPage() {
               Partner with us to create impactful influencer marketing campaigns
               that drive results
             </p>
-            <Button className="bg-red-600 hover:bg-red-700 text-white">
-              Contact Us
-            </Button>
+            <a
+              href="/contact"
+              className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md inline-flex items-center"
+            >
+              Partner with Us
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
           </div>
         </WavyBackground>
       </section>

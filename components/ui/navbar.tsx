@@ -16,7 +16,6 @@ export function Navbar() {
     { href: "/", label: "Home" },
     { href: "/brands", label: "Brands" },
     { href: "/influencers", label: "Influencers" },
-    { href: "/work", label: "Our Work" },
   ];
 
   return (
@@ -69,9 +68,12 @@ export function Navbar() {
             })}
           </nav>
           <div className="flex items-center gap-4">
-            <Button className="bg-red-600 hover:bg-red-700 text-white rounded-full text-sm font-medium hidden md:flex">
+            <Link
+              href={"/contact"}
+              className="bg-red-600 p-2 px-3  hover:bg-red-700 text-white rounded-full text-sm font-bold hidden md:flex"
+            >
               Get in Touch
-            </Button>
+            </Link>
             <Button
               variant="outline"
               className="md:hidden border-zinc-300 dark:border-zinc-700 p-2 rounded-full"
