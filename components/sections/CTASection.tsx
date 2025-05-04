@@ -16,12 +16,6 @@ export function CTASection() {
             <Button className="bg-red-600 hover:bg-red-700 text-white uppercase font-medium">
               Get in Touch
             </Button>
-            <Button
-              variant="outline"
-              className="border-white/20 text-white hover:bg-white/10 uppercase font-medium"
-            >
-              View Case Studies
-            </Button>
           </div>
         </div>
       </div>

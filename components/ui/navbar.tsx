@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -22,11 +23,34 @@ export function Navbar() {
     <header className="sticky top-4 z-50 w-full px-4">
       <div className="container">
         <div className="flex items-center justify-between max-w-5xl mx-auto bg-white/80 dark:bg-black/80 backdrop-blur-sm rounded-full border border-zinc-200 dark:border-zinc-800 px-6 py-3 shadow-sm">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold">
-              Solv<span className="text-red-600">Media</span>
+          <div className="flex flex-col items-center justify-center leading-none select-none">
+            <div className="flex items-center space-x-1">
+              <span
+                className="text-xl font-extrabold text-[#ff3131] tracking-wider font-sans"
+                style={{
+                  fontFamily:
+                    "Fredoka One, Baloo, Arial Rounded MT Bold, Arial, sans-serif",
+                }}
+              >
+                BUZZ
+              </span>
+              <span className="relative inline-block">
+                <span
+                  className="block text-xl font-extrabold text-[#ff3131] tracking-wider font-sans"
+                  style={{
+                    fontFamily:
+                      "Fredoka One, Baloo, Arial Rounded MT Bold, Arial, sans-serif",
+                  }}
+                >
+                  NOVA
+                </span>
+                <span className="absolute left-1/6 -translate-x-1/5 -top-1 w-5 h-1 bg-[#ff3131] rounded-full"></span>
+              </span>
+            </div>
+            <span className="text-[10px] tracking-[0.3em] text-black font-serif mt-1">
+              MEDIA
             </span>
-          </Link>
+          </div>
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -73,11 +97,43 @@ export function Navbar() {
       >
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-4 border-b border-zinc-200 dark:border-zinc-800">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="text-2xl font-bold">
-                Solv<span className="text-red-600">Media</span>
+            <div className="flex flex-col items-center justify-center leading-none select-none">
+              <div className="flex items-center space-x-1">
+                <span
+                  className="text-xl font-extrabold text-[#ff3131] tracking-wider font-sans"
+                  style={{
+                    fontFamily:
+                      "Fredoka One, Baloo, Arial Rounded MT Bold, Arial, sans-serif",
+                  }}
+                >
+                  BUZZ
+                </span>
+                <span className="relative inline-block">
+                  <span
+                    className="block text-xl font-extrabold text-[#ff3131] tracking-wider font-sans"
+                    style={{
+                      fontFamily:
+                        "Fredoka One, Baloo, Arial Rounded MT Bold, Arial, sans-serif",
+                    }}
+                  >
+                    N
+                  </span>
+                  <span className="absolute left-1/2 -translate-x-1/2 -top-1 w-5 h-1 bg-[#ff3131] rounded-full"></span>
+                </span>
+                <span
+                  className="text-xl font-extrabold text-[#ff3131] tracking-wider font-sans"
+                  style={{
+                    fontFamily:
+                      "Fredoka One, Baloo, Arial Rounded MT Bold, Arial, sans-serif",
+                  }}
+                >
+                  OVA
+                </span>
+              </div>
+              <span className="text-[10px] tracking-[0.3em] text-black font-serif mt-1">
+                MEDIA
               </span>
-            </Link>
+            </div>
             <Button
               variant="outline"
               className="border-zinc-300 dark:border-zinc-700 p-2 rounded-full"
