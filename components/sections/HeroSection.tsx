@@ -11,7 +11,7 @@ export function HeroSection() {
               WE HARNESS THE POWER OF CREATORS TO DRIVE TRUE HUMAN INFLUENCE
             </h1>
             <p className="mt-6 text-lg text-zinc-700 max-w-xl">
-              Solv Media is the best influencer marketing agency in India which
+              Buzznova Media is the influencer marketing agency in India which
               provides the top influencer marketing platform to help brands &
               visionary marketers leverage social media influencers.
             </p>

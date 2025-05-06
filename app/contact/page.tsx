@@ -11,6 +11,8 @@ import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { RiWhatsappLine } from "react-icons/ri";
+import { useState } from "react";
+import { toast } from "sonner";
 
 const words = [
   {
@@ -41,7 +43,7 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: FaLinkedin,
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://www.linkedin.com/company/buzznova-media/",
     color: "text-blue-600",
   },
   {
@@ -53,12 +55,55 @@ const socialLinks = [
   {
     name: "Email",
     icon: MdEmail,
-    url: "mailto:your@email.com",
+    url: "mailto:social@buzznova.media",
     color: "text-red-600",
   },
 ];
 
 export default function ContactPage() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success("Message sent successfully!");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
   return (
     <div className="min-h-screen bg-white text-zinc-900">
       {/* Hero Section */}
@@ -118,24 +163,46 @@ export default function ContactPage() {
                 Send Us a Message
               </Badge>
               <h2 className="text-3xl font-bold mb-6">Contact Form</h2>
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">
                     Name
                   </label>
-                  <Input id="name" placeholder="Your name" />
+                  <Input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your name"
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium">
                     Email
                   </label>
-                  <Input id="email" type="email" placeholder="your@email.com" />
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="your@email.com"
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="subject" className="text-sm font-medium">
                     Subject
                   </label>
-                  <Input id="subject" placeholder="Subject" />
+                  <Input
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="Subject"
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium">
@@ -143,12 +210,20 @@ export default function ContactPage() {
                   </label>
                   <Textarea
                     id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="Your message"
                     className="min-h-[150px]"
+                    required
                   />
                 </div>
-                <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
-                  Send Message
+                <Button
+                  type="submit"
+                  className="w-full bg-red-600 hover:bg-red-700 text-white"
+                  disabled={isLoading}
+                >
+                  {isLoading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>

@@ -134,7 +134,7 @@ export function FooterSection() {
           <div>
             <h3 className="font-bold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-3 text-zinc-600">
-              <li>Email: info@buzznova.media</li>
+              <li>Email: social@buzznova.media</li>
               <li>Phone: +91 9872390912</li>
             </ul>
             <Button className="mt-6 bg-red-600 hover:bg-red-700 text-white">
