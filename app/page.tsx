@@ -11,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <ClientsSection />
       <ServicesSection />
-      <InfluencerGridSection />
+      {/* <InfluencerGridSection /> */}
       <CTASection />
       <FooterSection />
     </div>
