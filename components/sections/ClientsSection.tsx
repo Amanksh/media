@@ -37,6 +37,10 @@ const brands = [
     name: "Angel One",
     image: "/brands/Angelone.png",
   },
+  {
+    name: "Garnier",
+    image: "/brands/garnier.png",
+  },
 ];
 
 export function ClientsSection() {
@@ -52,7 +56,7 @@ export function ClientsSection() {
           {brands.map((brand) => (
             <div
               key={brand.name}
-              className="relative w-full h-16  transition-all duration-300"
+              className="relative w-full h-12  transition-all duration-300"
             >
               <Image
                 src={brand.image}

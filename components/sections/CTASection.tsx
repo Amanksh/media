@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function CTASection() {
   return (
@@ -13,9 +14,11 @@ export function CTASection() {
             strategy with our influencer campaigns.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button className="bg-red-600 hover:bg-red-700 text-white uppercase font-medium">
-              Get in Touch
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-red-600 hover:bg-red-700 text-white uppercase font-medium">
+                Get in Touch
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

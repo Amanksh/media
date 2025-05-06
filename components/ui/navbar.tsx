@@ -14,14 +14,16 @@ export function Navbar() {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/brands", label: "Brands" },
-    { href: "/influencers", label: "Influencers" },
+    { href: "/brands", label: "About Us" },
+    // { href: "/influencers", label: "Influencers" },
+    { href: "/contact", label: "Contact Us" },
+    { href: "/services", label: "Services" },
   ];
 
   return (
     <header className="sticky top-4 z-50 w-full px-4">
       <div className="container">
-        <div className="flex items-center justify-between max-w-5xl mx-auto bg-white/80 dark:bg-black/80 backdrop-blur-sm rounded-full border border-zinc-200 dark:border-zinc-800 px-6 py-3 shadow-sm">
+        <div className="flex items-center justify-between max-w-7xl mx-auto bg-white/80 dark:bg-black/80 backdrop-blur-sm rounded-full border border-zinc-200 dark:border-zinc-800 px-6 py-3 shadow-sm">
           <div className="flex flex-col items-center justify-center leading-none select-none">
             <Link
               href="/"

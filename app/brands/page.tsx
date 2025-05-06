@@ -75,7 +75,7 @@ export default function BrandsPage() {
       {/* Hero Section */}
       <div className="relative h-[40vh] flex items-center justify-center overflow-hidden">
         <BackgroundBeams />
-        <div className="relative z-10 text-center">
+        <div className="flex flex-col items-center justify-center z-10 text-center">
           <TypewriterEffect words={words} />
           <p className="mt-4 text-lg text-zinc-600 max-w-2xl mx-auto px-4">
             Join the ranks of industry leaders who trust us to elevate their
