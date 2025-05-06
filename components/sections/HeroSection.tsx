@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -15,15 +16,11 @@ export function HeroSection() {
               visionary marketers leverage social media influencers.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button className="bg-red-600 hover:bg-red-700 text-white uppercase font-medium">
-                For Brands
-              </Button>
-              <Button
-                variant="outline"
-                className="border-zinc-300 text-zinc-900 uppercase font-medium"
-              >
-                For Creators
-              </Button>
+              <Link href="/contact">
+                <Button className="bg-red-600 hover:bg-red-700 text-white uppercase font-medium">
+                  Talk to us
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="relative">

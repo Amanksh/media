@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { RiWhatsappLine } from "react-icons/ri";
 
 const words = [
   {
@@ -45,7 +46,7 @@ const socialLinks = [
   },
   {
     name: "WhatsApp",
-    icon: FaWhatsapp,
+    icon: RiWhatsappLine,
     url: "https://wa.me/yournumber",
     color: "text-green-600",
   },
@@ -99,8 +100,10 @@ export default function ContactPage() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <Card className="p-4 hover:shadow-lg transition-shadow">
-                      <CardContent className="flex items-center space-x-3">
-                        <social.icon className={`text-2xl ${social.color}`} />
+                      <CardContent className="flex flex-col justify-center items-center ">
+                        <social.icon
+                          className={`md:text-2xl ${social.color}`}
+                        />
                         <span className="font-medium">{social.name}</span>
                       </CardContent>
                     </Card>

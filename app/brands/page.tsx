@@ -113,7 +113,7 @@ export default function BrandsPage() {
                   height={200}
                   className="object-contain w-full h-full"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg" />
+                <div className="absolute  inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg" />
               </div>
             ))}
           </div>

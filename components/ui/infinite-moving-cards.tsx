@@ -83,7 +83,7 @@ export const InfiniteMovingCards = ({
               </span>
               <div className="relative z-20 font-bold mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
-                  <span className="text-sm text-black">{item.title}</span>
+                  <span className="text-sm text-white">{item.title}</span>
                 </span>
               </div>
             </blockquote>
